@@ -275,7 +275,6 @@ $(document).ready(function() {
                     data: 'id=' + jobId + '&job=' + jobId,
                     dataType: 'json',
                     success: function(response) {
-                        console.log(response);
                         var total_revenue = calculate_revenue_total(response);
                         var forecast_revenue = total_revenue * (forecastColumnValue / 100);
                         var formattedColumnValue  = forecastColumnValue + '% @ Â£' + forecast_revenue.toFixed(2);

@@ -276,9 +276,9 @@ $(document).ready(function() {
                     dataType: 'json',
                     success: function(response) {
                         console.log(response);
-                        var total_revenue = calculate_revenue_total(response);
+                        var total_revenue = calculate_revenue_total(response.items);
                         var forecast_revenue = total_revenue * (forecastColumnValue / 100);
-                        var formattedColumnValue  = forecastColumnValue + '% @ Â£' + forecast_revenue.toFixed(2);
+                        var formattedColumnValue  = forecastColumnValue + '% @ £' + forecast_revenue.toFixed(2);
 
                         grid.jqGrid('setCell', rowId, 'CUSTOM_INDEX', formattedColumnValue);
                     }
